@@ -1,0 +1,98 @@
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  min-height: 36px;
+  min-width: 36px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.square-winner{
+  background: bisque;
+}
+
+.square-x {
+  color: #0048ff;
+}
+
+.square-o {
+  color: #00be14;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+}
+
+.game-board {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.dictaphone {
+  display: grid;
+  grid-template-areas: "m"
+                       "k"
+                       "h";
+}
+
+.dictaphone-status {
+  grid-area: m;
+}
+
+.dictaphone-buttons {
+  grid-area: k;
+}
+
+.dictaphone-transcript {
+  grid-area: h;
+}
+
+.game ol button:focus {
+  border: 2px solid black;
+}
+
+@media screen and (min-width: 450px) {
+  .game {
+    flex-direction: row;
+  }
+
+  .dictaphone-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
